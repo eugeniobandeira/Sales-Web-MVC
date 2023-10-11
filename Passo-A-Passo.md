@@ -31,6 +31,7 @@ São as implementações da comunicação com banco de específicos. Podemos citar o S
 ***************************************************************************************
 
 # Firts Controller and Razor Pages
+
 - Checklist
 	Route pattern: Controller / Acção / Id
 		- each controller method is mapped to an action
@@ -38,4 +39,37 @@ São as implementações da comunicação com banco de específicos. Podemos citar o S
 	C# block in Razor Page: @{}
 	Viewdata dictionary
 	Tag Helpers in Razor Pages (Ex.: asp-controller and asp-ation)
-	IActionResult
+	IActionResult -> é uma interface que é um super tipo genérico para todo tipo de ação, só que ele se desdobra em vários tipos especifícos.
+
+	Type and method Builder
+	ViewResult --> View
+	PartialResult --> PartialView
+	ContentResult --> Content
+	RedirectResult --> Redirect
+	RedirectToRouteResult --> RedirectToAction (Ex.: "Index", "Home", new { page = 1, sortBy = price }))
+	JsonResult --> Json
+	FileResult --> File
+	HttpNotFoundResult --> HttpNotFound
+	EmptyResult --> -
+
+# Firts MVC - Department
+
+-Checklist
+	Create new folder ViewModels e move ErrorViewModel (including namespace)
+		- ctrl + shift = b to fix references
+	Create class Models/Department
+	Create controller: MVC Controller Empty
+		- Name: DepartmentsController
+		- Instantiate a List<Department> and reurn it as View method parameter.
+
+	*Obs.: view´s name must be equals controller´s name
+	Create new folder Views/Departments --> Add --> View
+		View name: Index
+		Template: List
+		Model class: Department
+		Change title to Departmets
+		Notice:
+			@Model definition
+			intelisense for model
+			Helper methods
+			@foreach block
