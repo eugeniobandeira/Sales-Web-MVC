@@ -54,7 +54,7 @@ São as implementações da comunicação com banco de específicos. Podemos citar o S
 
 # Firts MVC - Department
 
--Checklist
+- Checklist
 	Create new folder ViewModels e move ErrorViewModel (including namespace)
 		- ctrl + shift = b to fix references
 	Create class Models/Department
@@ -73,3 +73,20 @@ São as implementações da comunicação com banco de específicos. Podemos citar o S
 			intelisense for model
 			Helper methods
 			@foreach block
+
+**********************************************************************
+
+# Deleting Department View and Controller
+
+- Checklist
+	Delete Controller
+	Delete folder Views/Departments
+
+# CRUD Scaffolding
+
+- Right button Controllers --> Add --> New Scaffolded Item
+	MVC controller with views, using Entity Framework
+	Model class: Department
+	Data context class: + and accept the name
+	Views (options): all three
+	Controller name: DepartmentsController
