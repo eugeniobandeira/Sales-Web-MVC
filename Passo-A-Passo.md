@@ -30,4 +30,12 @@ São as implementações da comunicação com banco de específicos. Podemos citar o S
 
 ***************************************************************************************
 
-
+# Firts Controller and Razor Pages
+- Checklist
+	Route pattern: Controller / Acção / Id
+		- each controller method is mapped to an action
+	Natural Templates
+	C# block in Razor Page: @{}
+	Viewdata dictionary
+	Tag Helpers in Razor Pages (Ex.: asp-controller and asp-ation)
+	IActionResult
