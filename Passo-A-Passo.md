@@ -106,3 +106,34 @@ São as implementações da comunicação com banco de específicos. Podemos citar o S
 		Install-Package Pomelo.EntityFrameworkCore.MySQL
 
 	Create first migration --> Pacakge Manager -> Add-Migration Initial, right after... Update-Database
+
+*********************************************************************************
+
+# Changing Theme 
+- Checklist
+	Go to bootswatch
+	Choose theme
+	Download bootstrap.css
+		Rename the file
+		Save file in wwwroot/lib/bootstrap/dist/css
+	Open _Layout.cshtml
+		Update bootstrap reference
+
+********************************************************************************
+
+# Other Entities and Second Migration
+- Checklist
+
+	Implement domain model
+		Basic atttributes
+		Association (let´s use ICollection, which metches List, HashSet etc.. *Instantiate*
+		Constructors (default and with arguments)
+		Custom methods.
+	Add DbSet´s in DbContext
+	Add-Migration OtherEntities
+
+	Create the classes Seller, SalesRecord, Department and the Enum SaleStatus.
+
+	Relationship: 
+	The selles can have multiple SalesRecords, but the sale belongs to only one seller.
+	The seller works for only one dept, but the dept can have multiple sellers
