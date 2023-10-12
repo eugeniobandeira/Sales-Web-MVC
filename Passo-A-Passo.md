@@ -137,3 +137,12 @@ São as implementações da comunicação com banco de específicos. Podemos citar o S
 	Relationship: 
 	The selles can have multiple SalesRecords, but the sale belongs to only one seller.
 	The seller works for only one dept, but the dept can have multiple sellers
+	
+********************************************************************************
+
+# Seeding Service
+- Checklist
+	Stop IIS
+	In Data, create SeedingService
+	In Program.cs, register SeedingService for dependency injection system
+	In Program.cs, add SeedingService as parameter of Configure method. Call Seed for development profile
