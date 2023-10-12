@@ -1,13 +1,18 @@
 using System.Security.Cryptography;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using SalesWebMvc.Data;
 using SalesWebMVC.Data;
+using SalesWebMVC.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var connString = (builder.Configuration.GetConnectionString("SalesWebMVCContext"));
 builder.Services.AddDbContext<SalesWebMVCContext>(options =>
     options.UseMySql(connString, ServerVersion.AutoDetect(connString)));
-    //builder => builder.MigrationsAssembly("SalesWebMvcApp")););
+//builder => builder.MigrationsAssembly("SalesWebMvcApp");
+
+builder.Services.AddScoped<SeedingService>();
+builder.Services.AddScoped<SellerService>();
 
 //Add services to the container.
 builder.Services.AddControllersWithViews();

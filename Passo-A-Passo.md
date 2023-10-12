@@ -159,3 +159,15 @@ São as implementações da comunicação com banco de específicos. Podemos citar o S
 	Views/Sellers -> Add -> View
 		View name -> Index
 		Change title
+
+********************************************************************************
+
+# SellerService and Basic FindAll
+- Checklist
+
+	Create folder Services
+	Create SellerService
+	In Program.cs, register SellerService to dependency injection system
+	In SellerService, impleent FindAll, returning List<Seller>
+	In SellersController, implement Index method, whic should call SellerService.FindAll
+	In Views/Sellers/Index, write template code to show sellers
