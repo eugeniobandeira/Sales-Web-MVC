@@ -90,3 +90,19 @@ São as implementações da comunicação com banco de específicos. Podemos citar o S
 	Data context class: + and accept the name
 	Views (options): all three
 	Controller name: DepartmentsController
+
+# MySQL Adaptation and First Migration
+
+- Checklist
+	Em appsettings.json, set connection string:
+		"server=localhost;userid=root;password=1234;database=saleswebmvcappdb"
+	
+	At Program.cs, fix DBContext definition for dependency injection system:
+	services.AddDbContext<SalesWebMVCAppContext>(options => options.UseMySql(Configuration
+		.GetConnectionString("SalesWebMvcAppContext"), builder => builder.MigrationsAssembly("SalesWebMvcApp")));
+
+	Install MySQL provider:
+		Open Nuget Package Manager Console
+		Install-Package Pomelo.EntityFrameworkCore.MySQL
+
+	Create first migration --> Pacakge Manager -> Add-Migration Initial, right after... Update-Database
