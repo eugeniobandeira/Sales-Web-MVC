@@ -142,7 +142,20 @@ São as implementações da comunicação com banco de específicos. Podemos citar o S
 
 # Seeding Service
 - Checklist
+
 	Stop IIS
 	In Data, create SeedingService
 	In Program.cs, register SeedingService for dependency injection system
 	In Program.cs, add SeedingService as parameter of Configure method. Call Seed for development profile
+
+********************************************************************************
+
+# SellersController
+- Checklist
+	
+	Create Departments and Sellers links on navbar
+	Controller -> Add -> Controller -> MVC Controller - Empty -> SellersController
+	Create folder Views/Selleres
+	Views/Sellers -> Add -> View
+		View name -> Index
+		Change title
