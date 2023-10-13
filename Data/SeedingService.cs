@@ -19,6 +19,7 @@ namespace SalesWebMvc.Data
                 _context.Seller.Any() ||
                 _context.SalesRecord.Any())
             {
+                Console.WriteLine("Chequei o if do seed");
                 return;
             }
 
