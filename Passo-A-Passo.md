@@ -171,3 +171,13 @@ São as implementações da comunicação com banco de específicos. Podemos citar o S
 	In SellerService, impleent FindAll, returning List<Seller>
 	In SellersController, implement Index method, whic should call SellerService.FindAll
 	In Views/Sellers/Index, write template code to show sellers
+
+********************************************************************************
+
+# Simple Create Form
+- Checklist
+	In views/Sellers/Index, create link to "Create"
+	In controller, implement "Create" GET action
+	In views/Sellers, create "Create" view
+	In Services/SellerSrvice create insert method
+	In controller, implement "Create" POST action
