@@ -11,6 +11,8 @@ public class Seller
     //Association Seller and just one Department
     public Department Department { get; set; }
 
+    public int DepartmentId { get; set; }
+
     //Association Seller and multiple SalesRecord
     public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 

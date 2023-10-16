@@ -176,8 +176,19 @@ São as implementações da comunicação com banco de específicos. Podemos citar o S
 
 # Simple Create Form
 - Checklist
+
 	In views/Sellers/Index, create link to "Create"
 	In controller, implement "Create" GET action
 	In views/Sellers, create "Create" view
 	In Services/SellerSrvice create insert method
 	In controller, implement "Create" POST action
+	
+********************************************************************************
+
+# Foreign Key Not Null (referencial integrity)
+- Checklist
+
+	In Seller, add DepartmentId
+	Drop database
+	Create Newm migration, update database
+	Update SellerService.Insert for now: oject.Department = _context.Department.First();
