@@ -197,6 +197,7 @@ São as implementações da comunicação com banco de específicos. Podemos citar o S
 
 # SellerFormViewModel and Department Select Component
 - Checklist: 
+
 	Create DepartmentService with FindAll method
 	In Program.cs, register DeppartmentService to dependency injection system
 	Create SellerFormViewModel
@@ -206,3 +207,16 @@ São as implementações da comunicação com banco de específicos. Podemos citar o S
 	In Views/Sellers/Create:
 		Update model type to SellerFormViewModel
 		Add sellect component for DepartmentId
+	
+********************************************************************************
+
+# Delete Seller
+- Checklist
+
+	In SellerService, create FindById and Remove operations
+	In controller, create "Delete" GET action
+	In View/Sellers/Index, check link to "Delete" action
+	Create delete confirmation view: View/Sellers/Delete
+	Test App
+	In controller, create "Delete" POST action
+	Test App
