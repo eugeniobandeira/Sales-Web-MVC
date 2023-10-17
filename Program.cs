@@ -12,10 +12,6 @@ builder.Services.AddDbContext<SalesWebMVCContext>(options =>
 options.UseMySql(connString, ServerVersion.AutoDetect(connString),
 builder => builder.MigrationsAssembly("SalesWebMVC")));
 
-//builder.Services.AddDbContext<SalesWebMVCContext>(options =>
-//                    options.UseMySql(connString, ServerVersion.AutoDetect(connString) builder =>
-//                        builder.MigrationsAssembly("SalesWebMVC")));
-
 builder.Services.AddScoped<SeedingService>();
 builder.Services.AddScoped<SellerService>();
 builder.Services.AddScoped<DepartmentService>();
@@ -28,14 +24,14 @@ var app = builder.Build();
 void Configure(SeedingService seedingService)
 {
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-    
-    app.UseHsts();
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseExceptionHandler("/Home/Error");
 
-    seedingService.Seed();
-}
+        app.UseHsts();
+
+        seedingService.Seed();
+    }
 }
 app.UseHttpsRedirection();
 app.UseStaticFiles();

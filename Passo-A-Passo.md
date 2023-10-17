@@ -220,3 +220,13 @@ São as implementações da comunicação com banco de específicos. Podemos citar o S
 	Test App
 	In controller, create "Delete" POST action
 	Test App
+	
+********************************************************************************
+
+# Seller Details And Eager Loading
+- Checklist
+	
+	In View/Sellers/Index, check link to "Details" action
+	In controller, create "Details" GET action
+	Create view: View/Sellers/Details
+	Include in FindAll: Include(obj => obj.Department) (namespace: Microsoft.EntityFrameworkCore)  

@@ -7,15 +7,15 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-secondary">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
-            <th>
+            <th class="bg-success text-white">
                 @Html.DisplayNameFor(model => model.Name)
             </th>
-            <th></th>
+            <th class="bg-success text-white"></th>
         </tr>
     </thead>
     <tbody>
