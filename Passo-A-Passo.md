@@ -192,3 +192,17 @@ São as implementações da comunicação com banco de específicos. Podemos citar o S
 	Drop database
 	Create Newm migration, update database
 	Update SellerService.Insert for now: oject.Department = _context.Department.First();
+	
+********************************************************************************
+
+# SellerFormViewModel and Department Select Component
+- Checklist: 
+	Create DepartmentService with FindAll method
+	In Program.cs, register DeppartmentService to dependency injection system
+	Create SellerFormViewModel
+	In controller:
+		New dependency: DepartmentService
+		Update "Create" GET action
+	In Views/Sellers/Create:
+		Update model type to SellerFormViewModel
+		Add sellect component for DepartmentId
